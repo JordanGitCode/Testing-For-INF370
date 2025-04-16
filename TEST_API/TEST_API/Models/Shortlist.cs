@@ -23,10 +23,10 @@ public partial class Shortlist
     [Unicode(false)]
     public string Stage { get; set; }
 
-    //[InverseProperty("Shortlist")]
-    //public virtual ICollection<ShortlistedCandidate> ShortlistedCandidates { get; set; } = new List<ShortlistedCandidate>();
+    [InverseProperty("Shortlist")]
+    public virtual ICollection<ShortlistedCandidate> ShortlistedCandidates { get; set; } = new List<ShortlistedCandidate>();
 
-    //[ForeignKey("VacancyId")]
-    //[InverseProperty("Shortlists")]
-    //public virtual Vacancy Vacancy { get; set; }
+    [ForeignKey("VacancyId")]
+    [InverseProperty("Shortlists")]
+    public virtual Vacancy Vacancy { get; set; }
 }

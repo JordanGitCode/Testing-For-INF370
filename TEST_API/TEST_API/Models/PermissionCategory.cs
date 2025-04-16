@@ -20,6 +20,6 @@ public partial class PermissionCategory
     [Column(TypeName = "text")]
     public string Description { get; set; }
 
-    //[InverseProperty("PermissionCategory")]
-    //public virtual ICollection<Permission> Permissions { get; set; } = new List<Permission>();
+    [InverseProperty("PermissionCategory")]
+    public virtual ICollection<Permission> Permissions { get; set; } = new List<Permission>();
 }

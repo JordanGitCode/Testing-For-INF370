@@ -26,11 +26,11 @@ public partial class ApplicationFeedback
 
     public TimeOnly? Time { get; set; }
 
-    //[ForeignKey("ApplicationId")]
-    //[InverseProperty("ApplicationFeedbacks")]
-    //public virtual Application Application { get; set; }
+    [ForeignKey("ApplicationId")]
+    [InverseProperty("ApplicationFeedbacks")]
+    public virtual Application Application { get; set; }
 
-    //[ForeignKey("EmployeeId")]
-    //[InverseProperty("ApplicationFeedbacks")]
-    //public virtual Employee Employee { get; set; }
+    [ForeignKey("EmployeeId")]
+    [InverseProperty("ApplicationFeedbacks")]
+    public virtual Employee Employee { get; set; }
 }

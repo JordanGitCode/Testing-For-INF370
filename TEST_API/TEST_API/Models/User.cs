@@ -55,43 +55,78 @@ public partial class User
     [Unicode(false)]
     public string CurrentPosition { get; set; }
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<Application> Applications { get; set; } = new List<Application>();
+    [InverseProperty("User")]
+    public virtual ICollection<Application> Applications { get; set; } = new List<Application>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<ConverationParticipant> ConverationParticipants { get; set; } = new List<ConverationParticipant>();
+    [InverseProperty("User")]
+    public virtual ICollection<ConverationParticipant> ConverationParticipants { get; set; } = new List<ConverationParticipant>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<Conversation> Conversations { get; set; } = new List<Conversation>();
+    [InverseProperty("User")]
+    public virtual ICollection<Conversation> Conversations { get; set; } = new List<Conversation>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
+    [InverseProperty("User")]
+    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
-    //[ForeignKey("GenderId")]
-    //[InverseProperty("Users")]
-    //public virtual Gender Gender { get; set; }
+    [ForeignKey("GenderId")]
+    [InverseProperty("Users")]
+    public virtual Gender Gender { get; set; }
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<Interview> Interviews { get; set; } = new List<Interview>();
+    [InverseProperty("User")]
+    public virtual ICollection<Interview> Interviews { get; set; } = new List<Interview>();
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
+    [InverseProperty("User")]
+    public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
 
-    //[ForeignKey("RaceId")]
-    //[InverseProperty("Users")]
-    //public virtual Race Race { get; set; }
+    [ForeignKey("RaceId")]
+    [InverseProperty("Users")]
+    public virtual Race Race { get; set; }
 
-    //[ForeignKey("RoleId")]
-    //[InverseProperty("Users")]
-    //public virtual Role Role { get; set; }
+    [ForeignKey("RoleId")]
+    [InverseProperty("Users")]
+    public virtual Role Role { get; set; }
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<ShortlistedCandidate> ShortlistedCandidates { get; set; } = new List<ShortlistedCandidate>();
+    [InverseProperty("User")]
+    public virtual ICollection<ShortlistedCandidate> ShortlistedCandidates { get; set; } = new List<ShortlistedCandidate>();
 
-    //[ForeignKey("TitleId")]
-    //[InverseProperty("Users")]
-    //public virtual Title Title { get; set; }
+    [ForeignKey("TitleId")]
+    [InverseProperty("Users")]
+    public virtual Title Title { get; set; }
 
-    //[InverseProperty("User")]
-    //public virtual ICollection<UserSession> UserSessions { get; set; } = new List<UserSession>();
+    [InverseProperty("User")]
+    public virtual ICollection<UserSession> UserSessions { get; set; } = new List<UserSession>();
+}
+
+public class UserInputDto
+{
+    public int? TitleId { get; set; }
+    public int? RaceId { get; set; }
+    public int? GenderId { get; set; }
+    public int? RoleId { get; set; }
+
+    public string Name { get; set; }
+    public string Surname { get; set; }
+    public string Idnumber { get; set; }
+    public string PhoneNumber { get; set; }
+    public string EmailAddress { get; set; }
+    public DateOnly? DateOfBirth { get; set; }
+
+    public string PasswordHash { get; set; }
+
+    public string CurrentPosition { get; set; }
+}
+
+public class UserDto
+{
+    public int UserId { get; set; }
+
+    public string Name { get; set; }
+    public string Surname { get; set; }
+    public string EmailAddress { get; set; }
+
+    public string CurrentPosition { get; set; }
+
+    public string PasswordHash { get; set; }
+
+    // Add only what’s needed—no sensitive info like PasswordHash
+
 }

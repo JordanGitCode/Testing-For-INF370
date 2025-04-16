@@ -271,3 +271,8 @@ C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\obj\Debug\n
 C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\obj\Debug\net8.0\TEST_API.pdb
 C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\obj\Debug\net8.0\TEST_API.genruntimeconfig.cache
 C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\obj\Debug\net8.0\ref\TEST_API.dll
+C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\duder\Documents\GitHub\Testing-For-INF370\TEST_API\TEST_API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll

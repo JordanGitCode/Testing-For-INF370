@@ -21,11 +21,11 @@ public partial class ConverationParticipant
     [Column(TypeName = "datetime")]
     public DateTime? JoinedAt { get; set; }
 
-    //[ForeignKey("ConversationId")]
-    //[InverseProperty("ConverationParticipants")]
-    //public virtual Conversation Conversation { get; set; }
+    [ForeignKey("ConversationId")]
+    [InverseProperty("ConverationParticipants")]
+    public virtual Conversation Conversation { get; set; }
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("ConverationParticipants")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("ConverationParticipants")]
+    public virtual User User { get; set; }
 }

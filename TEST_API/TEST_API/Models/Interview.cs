@@ -51,21 +51,21 @@ public partial class Interview
     [Column(TypeName = "decimal(5, 2)")]
     public decimal? Score { get; set; }
 
-    //[ForeignKey("EmployeeId")]
-    //[InverseProperty("Interviews")]
-    //public virtual Employee Employee { get; set; }
+    [ForeignKey("EmployeeId")]
+    [InverseProperty("Interviews")]
+    public virtual Employee Employee { get; set; }
 
-    //[InverseProperty("Interview")]
-    //public virtual ICollection<InterviewFeedback> InterviewFeedbacks { get; set; } = new List<InterviewFeedback>();
+    [InverseProperty("Interview")]
+    public virtual ICollection<InterviewFeedback> InterviewFeedbacks { get; set; } = new List<InterviewFeedback>();
 
-    //[InverseProperty("Interview")]
-    //public virtual ICollection<InterviewNote> InterviewNotes { get; set; } = new List<InterviewNote>();
+    [InverseProperty("Interview")]
+    public virtual ICollection<InterviewNote> InterviewNotes { get; set; } = new List<InterviewNote>();
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("Interviews")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("Interviews")]
+    public virtual User User { get; set; }
 
-    //[ForeignKey("VacancyId")]
-    //[InverseProperty("Interviews")]
-    //public virtual Vacancy Vacancy { get; set; }
+    [ForeignKey("VacancyId")]
+    [InverseProperty("Interviews")]
+    public virtual Vacancy Vacancy { get; set; }
 }

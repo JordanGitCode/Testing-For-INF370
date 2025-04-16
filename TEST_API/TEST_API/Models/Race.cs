@@ -18,6 +18,6 @@ public partial class Race
     [Unicode(false)]
     public string Race1 { get; set; }
 
-    //[InverseProperty("Race")]
-    //public virtual ICollection<User> Users { get; set; } = new List<User>();
+    [InverseProperty("Race")]
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

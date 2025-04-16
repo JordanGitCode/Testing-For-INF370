@@ -23,7 +23,7 @@ public partial class InterviewFeedback
 
     public TimeOnly? Time { get; set; }
 
-    //[ForeignKey("InterviewId")]
-    //[InverseProperty("InterviewFeedbacks")]
-    //public virtual Interview Interview { get; set; }
+    [ForeignKey("InterviewId")]
+    [InverseProperty("InterviewFeedbacks")]
+    public virtual Interview Interview { get; set; }
 }

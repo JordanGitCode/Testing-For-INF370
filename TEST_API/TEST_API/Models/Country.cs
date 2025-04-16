@@ -17,9 +17,9 @@ public partial class Country
     [Unicode(false)]
     public string Name { get; set; }
 
-    //[InverseProperty("Country")]
-    //public virtual ICollection<Branch> Branches { get; set; } = new List<Branch>();
+    [InverseProperty("Country")]
+    public virtual ICollection<Branch> Branches { get; set; } = new List<Branch>();
 
-    //[InverseProperty("Country")]
-    //public virtual ICollection<Province> Provinces { get; set; } = new List<Province>();
+    [InverseProperty("Country")]
+    public virtual ICollection<Province> Provinces { get; set; } = new List<Province>();
 }

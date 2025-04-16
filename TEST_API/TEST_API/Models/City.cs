@@ -20,13 +20,13 @@ public partial class City
     [Unicode(false)]
     public string Name { get; set; }
 
-    //[InverseProperty("City")]
-    //public virtual ICollection<Branch> Branches { get; set; } = new List<Branch>();
+    [InverseProperty("City")]
+    public virtual ICollection<Branch> Branches { get; set; } = new List<Branch>();
 
-    //[ForeignKey("ProvinceId")]
-    //[InverseProperty("Cities")]
-    //public virtual Province Province { get; set; }
+    [ForeignKey("ProvinceId")]
+    [InverseProperty("Cities")]
+    public virtual Province Province { get; set; }
 
-    //[InverseProperty("City")]
-    //public virtual ICollection<Suburb> Suburbs { get; set; } = new List<Suburb>();
+    [InverseProperty("City")]
+    public virtual ICollection<Suburb> Suburbs { get; set; } = new List<Suburb>();
 }

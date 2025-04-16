@@ -18,11 +18,11 @@ public partial class RolePermission
     [Column("Role_ID")]
     public int RoleId { get; set; }
 
-    //[ForeignKey("PermissionId")]
-    //[InverseProperty("RolePermissions")]
-    //public virtual Permission Permission { get; set; }
+    [ForeignKey("PermissionId")]
+    [InverseProperty("RolePermissions")]
+    public virtual Permission Permission { get; set; }
 
-    //[ForeignKey("RoleId")]
-    //[InverseProperty("RolePermissions")]
-    //public virtual Role Role { get; set; }
+    [ForeignKey("RoleId")]
+    [InverseProperty("RolePermissions")]
+    public virtual Role Role { get; set; }
 }

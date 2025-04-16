@@ -25,7 +25,7 @@ public partial class InterviewNote
     [Column(TypeName = "datetime")]
     public DateTime? LastUpdatedAt { get; set; }
 
-    //[ForeignKey("InterviewId")]
-    //[InverseProperty("InterviewNotes")]
-    //public virtual Interview Interview { get; set; }
+    [ForeignKey("InterviewId")]
+    [InverseProperty("InterviewNotes")]
+    public virtual Interview Interview { get; set; }
 }

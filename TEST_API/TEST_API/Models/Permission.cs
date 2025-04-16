@@ -23,10 +23,10 @@ public partial class Permission
     [Column(TypeName = "text")]
     public string Description { get; set; }
 
-    //[ForeignKey("PermissionCategoryId")]
-    //[InverseProperty("Permissions")]
-    //public virtual PermissionCategory PermissionCategory { get; set; }
+    [ForeignKey("PermissionCategoryId")]
+    [InverseProperty("Permissions")]
+    public virtual PermissionCategory PermissionCategory { get; set; }
 
-    //[InverseProperty("Permission")]
-    //public virtual ICollection<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
+    [InverseProperty("Permission")]
+    public virtual ICollection<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
 }

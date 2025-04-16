@@ -32,9 +32,9 @@ public partial class Job
 
     public int? NumberVacancies { get; set; }
 
-    //[InverseProperty("Job")]
-    //public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
+    [InverseProperty("Job")]
+    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
-    //[InverseProperty("Job")]
-    //public virtual ICollection<Vacancy> Vacancies { get; set; } = new List<Vacancy>();
+    [InverseProperty("Job")]
+    public virtual ICollection<Vacancy> Vacancies { get; set; } = new List<Vacancy>();
 }

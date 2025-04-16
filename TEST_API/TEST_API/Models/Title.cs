@@ -18,6 +18,6 @@ public partial class Title
     [Unicode(false)]
     public string Title1 { get; set; }
 
-    //[InverseProperty("Title")]
-    //public virtual ICollection<User> Users { get; set; } = new List<User>();
+    [InverseProperty("Title")]
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

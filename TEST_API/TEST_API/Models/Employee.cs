@@ -27,24 +27,24 @@ public partial class Employee
 
     public DateOnly? HireDate { get; set; }
 
-    //[InverseProperty("Employee")]
-    //public virtual ICollection<ApplicationFeedback> ApplicationFeedbacks { get; set; } = new List<ApplicationFeedback>();
+    [InverseProperty("Employee")]
+    public virtual ICollection<ApplicationFeedback> ApplicationFeedbacks { get; set; } = new List<ApplicationFeedback>();
 
-    //[ForeignKey("BranchId")]
-    //[InverseProperty("Employees")]
-    //public virtual Branch Branch { get; set; }
+    [ForeignKey("BranchId")]
+    [InverseProperty("Employees")]
+    public virtual Branch Branch { get; set; }
 
-    //[InverseProperty("Employee")]
-    //public virtual ICollection<Conversation> Conversations { get; set; } = new List<Conversation>();
+    [InverseProperty("Employee")]
+    public virtual ICollection<Conversation> Conversations { get; set; } = new List<Conversation>();
 
-    //[InverseProperty("Employee")]
-    //public virtual ICollection<Interview> Interviews { get; set; } = new List<Interview>();
+    [InverseProperty("Employee")]
+    public virtual ICollection<Interview> Interviews { get; set; } = new List<Interview>();
 
-    //[ForeignKey("JobId")]
-    //[InverseProperty("Employees")]
-    //public virtual Job Job { get; set; }
+    [ForeignKey("JobId")]
+    [InverseProperty("Employees")]
+    public virtual Job Job { get; set; }
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("Employees")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("Employees")]
+    public virtual User User { get; set; }
 }

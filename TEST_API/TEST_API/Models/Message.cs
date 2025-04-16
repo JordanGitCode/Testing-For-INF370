@@ -25,11 +25,11 @@ public partial class Message
     [Column(TypeName = "datetime")]
     public DateTime? SentAt { get; set; }
 
-    //[ForeignKey("ConversationId")]
-    //[InverseProperty("Messages")]
-    //public virtual Conversation Conversation { get; set; }
+    [ForeignKey("ConversationId")]
+    [InverseProperty("Messages")]
+    public virtual Conversation Conversation { get; set; }
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("Messages")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("Messages")]
+    public virtual User User { get; set; }
 }

@@ -33,25 +33,25 @@ public partial class Branch
     [Column("Suburb_ID")]
     public int? SuburbId { get; set; }
 
-    //[ForeignKey("CityId")]
-    //[InverseProperty("Branches")]
-    //public virtual City City { get; set; }
+    [ForeignKey("CityId")]
+    [InverseProperty("Branches")]
+    public virtual City City { get; set; }
 
-    //[ForeignKey("CountryId")]
-    //[InverseProperty("Branches")]
-    //public virtual Country Country { get; set; }
+    [ForeignKey("CountryId")]
+    [InverseProperty("Branches")]
+    public virtual Country Country { get; set; }
 
-    //[InverseProperty("Branch")]
-    //public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
+    [InverseProperty("Branch")]
+    public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
-    //[ForeignKey("ProvinceId")]
-    //[InverseProperty("Branches")]
-    //public virtual Province Province { get; set; }
+    [ForeignKey("ProvinceId")]
+    [InverseProperty("Branches")]
+    public virtual Province Province { get; set; }
 
-    //[ForeignKey("SuburbId")]
-    //[InverseProperty("Branches")]
-    //public virtual Suburb Suburb { get; set; }
+    [ForeignKey("SuburbId")]
+    [InverseProperty("Branches")]
+    public virtual Suburb Suburb { get; set; }
 
-    //[InverseProperty("Branch")]
-    //public virtual ICollection<Vacancy> Vacancies { get; set; } = new List<Vacancy>();
+    [InverseProperty("Branch")]
+    public virtual ICollection<Vacancy> Vacancies { get; set; } = new List<Vacancy>();
 }

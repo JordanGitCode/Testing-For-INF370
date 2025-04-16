@@ -18,6 +18,6 @@ public partial class Gender
     [Unicode(false)]
     public string Gender1 { get; set; }
 
-    //[InverseProperty("Gender")]
-    //public virtual ICollection<User> Users { get; set; } = new List<User>();
+    [InverseProperty("Gender")]
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

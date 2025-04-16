@@ -18,11 +18,11 @@ public partial class ShortlistedCandidate
     [Column("Shortlist_ID")]
     public int ShortlistId { get; set; }
 
-    //[ForeignKey("ShortlistId")]
-    //[InverseProperty("ShortlistedCandidates")]
-    //public virtual Shortlist Shortlist { get; set; }
+    [ForeignKey("ShortlistId")]
+    [InverseProperty("ShortlistedCandidates")]
+    public virtual Shortlist Shortlist { get; set; }
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("ShortlistedCandidates")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("ShortlistedCandidates")]
+    public virtual User User { get; set; }
 }

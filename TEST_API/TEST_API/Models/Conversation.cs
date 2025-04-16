@@ -26,17 +26,17 @@ public partial class Conversation
     [Column(TypeName = "datetime")]
     public DateTime? CreatedAt { get; set; }
 
-    //[InverseProperty("Conversation")]
-    //public virtual ICollection<ConverationParticipant> ConverationParticipants { get; set; } = new List<ConverationParticipant>();
+    [InverseProperty("Conversation")]
+    public virtual ICollection<ConverationParticipant> ConverationParticipants { get; set; } = new List<ConverationParticipant>();
 
-    //[ForeignKey("EmployeeId")]
-    //[InverseProperty("Conversations")]
-    //public virtual Employee Employee { get; set; }
+    [ForeignKey("EmployeeId")]
+    [InverseProperty("Conversations")]
+    public virtual Employee Employee { get; set; }
 
-    //[InverseProperty("Conversation")]
-    //public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
+    [InverseProperty("Conversation")]
+    public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("Conversations")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("Conversations")]
+    public virtual User User { get; set; }
 }

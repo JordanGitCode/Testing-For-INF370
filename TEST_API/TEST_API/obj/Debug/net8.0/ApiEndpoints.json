@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[TEST_API.Models.User, TEST_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TEST_API.Models.UserDto, TEST_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,14 +28,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "TEST_API.Models.User",
+        "Name": "userInputDto",
+        "Type": "TEST_API.Models.UserInputDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "TEST_API.Models.User",
+        "Type": "TEST_API.Models.UserInputDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TEST_API.Models.User",
+        "Type": "TEST_API.Models.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -85,8 +85,8 @@
         "IsRequired": true
       },
       {
-        "Name": "user",
-        "Type": "TEST_API.Models.User",
+        "Name": "dto",
+        "Type": "TEST_API.Models.UserInputDto",
         "IsRequired": true
       }
     ],

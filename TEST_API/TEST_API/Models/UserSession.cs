@@ -22,7 +22,7 @@ public partial class UserSession
     [Column("Session_End", TypeName = "datetime")]
     public DateTime? SessionEnd { get; set; }
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("UserSessions")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("UserSessions")]
+    public virtual User User { get; set; }
 }

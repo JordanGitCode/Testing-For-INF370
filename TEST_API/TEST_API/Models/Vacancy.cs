@@ -28,21 +28,21 @@ public partial class Vacancy
 
     public DateOnly? ApplicationDeadline { get; set; }
 
-    //[ForeignKey("ApplicationId")]
-    //[InverseProperty("Vacancies")]
-    //public virtual Application Application { get; set; }
+    [ForeignKey("ApplicationId")]
+    [InverseProperty("Vacancies")]
+    public virtual Application Application { get; set; }
 
-    //[ForeignKey("BranchId")]
-    //[InverseProperty("Vacancies")]
-    //public virtual Branch Branch { get; set; }
+    [ForeignKey("BranchId")]
+    [InverseProperty("Vacancies")]
+    public virtual Branch Branch { get; set; }
 
-    //[InverseProperty("Vacancy")]
-    //public virtual ICollection<Interview> Interviews { get; set; } = new List<Interview>();
+    [InverseProperty("Vacancy")]
+    public virtual ICollection<Interview> Interviews { get; set; } = new List<Interview>();
 
-    //[ForeignKey("JobId")]
-    //[InverseProperty("Vacancies")]
-    //public virtual Job Job { get; set; }
+    [ForeignKey("JobId")]
+    [InverseProperty("Vacancies")]
+    public virtual Job Job { get; set; }
 
-    //[InverseProperty("Vacancy")]
-    //public virtual ICollection<Shortlist> Shortlists { get; set; } = new List<Shortlist>();
+    [InverseProperty("Vacancy")]
+    public virtual ICollection<Shortlist> Shortlists { get; set; } = new List<Shortlist>();
 }

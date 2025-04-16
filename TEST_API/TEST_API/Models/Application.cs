@@ -24,13 +24,13 @@ public partial class Application
     [Column(TypeName = "text")]
     public string ApplicantNote { get; set; }
 
-    //[InverseProperty("Application")]
-    //public virtual ICollection<ApplicationFeedback> ApplicationFeedbacks { get; set; } = new List<ApplicationFeedback>();
+    [InverseProperty("Application")]
+    public virtual ICollection<ApplicationFeedback> ApplicationFeedbacks { get; set; } = new List<ApplicationFeedback>();
 
-    //[ForeignKey("UserId")]
-    //[InverseProperty("Applications")]
-    //public virtual User User { get; set; }
+    [ForeignKey("UserId")]
+    [InverseProperty("Applications")]
+    public virtual User User { get; set; }
 
-    //[InverseProperty("Application")]
-    //public virtual ICollection<Vacancy> Vacancies { get; set; } = new List<Vacancy>();
+    [InverseProperty("Application")]
+    public virtual ICollection<Vacancy> Vacancies { get; set; } = new List<Vacancy>();
 }

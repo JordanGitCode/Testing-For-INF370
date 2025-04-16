@@ -20,10 +20,10 @@ public partial class Suburb
     [Unicode(false)]
     public string Name { get; set; }
 
-    //[InverseProperty("Suburb")]
-    //public virtual ICollection<Branch> Branches { get; set; } = new List<Branch>();
+    [InverseProperty("Suburb")]
+    public virtual ICollection<Branch> Branches { get; set; } = new List<Branch>();
 
-    //[ForeignKey("CityId")]
-    //[InverseProperty("Suburbs")]
-    //public virtual City City { get; set; }
+    [ForeignKey("CityId")]
+    [InverseProperty("Suburbs")]
+    public virtual City City { get; set; }
 }
