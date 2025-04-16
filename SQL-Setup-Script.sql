@@ -5,6 +5,10 @@
 -- Location Hierarchy
 -- ============================
 
+--CREATE DATABASE TEST_MAIN;
+--USE TEST_MAIN;
+-- ============================
+
 CREATE TABLE Country
 (
     Country_ID INT PRIMARY KEY,
@@ -14,7 +18,7 @@ CREATE TABLE Country
 CREATE TABLE Province
 (
     Province_ID INT PRIMARY KEY,
-    Country_ID INT,
+    Country_ID INT NULL,
     Name VARCHAR(100),
     FOREIGN KEY (Country_ID) REFERENCES Country(Country_ID)
 );
@@ -22,7 +26,7 @@ CREATE TABLE Province
 CREATE TABLE City
 (
     City_ID INT PRIMARY KEY,
-    Province_ID INT,
+    Province_ID INT NULL,
     Name VARCHAR(100),
     FOREIGN KEY (Province_ID) REFERENCES Province(Province_ID)
 );
@@ -30,7 +34,7 @@ CREATE TABLE City
 CREATE TABLE Suburb
 (
     Suburb_ID INT PRIMARY KEY,
-    City_ID INT,
+    City_ID INT NULL,
     Name VARCHAR(100),
     FOREIGN KEY (City_ID) REFERENCES City(City_ID)
 );
@@ -38,6 +42,7 @@ CREATE TABLE Suburb
 -- ============================
 -- [User] and Identity
 -- ============================
+
 CREATE TABLE Role
 (
     Role_ID INT PRIMARY KEY,
@@ -68,10 +73,10 @@ CREATE TABLE Gender
 CREATE TABLE [User]
 (
     User_ID INT PRIMARY KEY,
-    Title_ID INT,
-    Race_ID INT,
-    Gender_ID INT,
-    Role_ID INT,
+    Title_ID INT NULL,
+    Race_ID INT NULL,
+    Gender_ID INT NULL,
+    Role_ID INT NULL,
     Name VARCHAR(100),
     Surname VARCHAR(100),
     IDNumber VARCHAR(20),
@@ -89,7 +94,7 @@ CREATE TABLE [User]
 CREATE TABLE UserSession
 (
     UserSession_ID INT PRIMARY KEY,
-    User_ID INT,
+    User_ID INT NULL,
     Session_Start DATETIME,
     Session_End DATETIME,
     FOREIGN KEY (User_ID) REFERENCES [User](User_ID)
@@ -108,7 +113,7 @@ CREATE TABLE PermissionCategory
 CREATE TABLE Permission
 (
     Permission_ID INT PRIMARY KEY,
-    PermissionCategory_ID INT,
+    PermissionCategory_ID INT NULL,
     Name VARCHAR(100),
     Description TEXT,
     FOREIGN KEY (PermissionCategory_ID) REFERENCES PermissionCategory(PermissionCategory_ID)
@@ -116,8 +121,8 @@ CREATE TABLE Permission
 
 CREATE TABLE RolePermission
 (
-    Permission_ID INT,
-    Role_ID INT,
+    Permission_ID INT NOT NULL,
+    Role_ID INT NOT NULL,
     PRIMARY KEY (Permission_ID, Role_ID),
     FOREIGN KEY (Permission_ID) REFERENCES Permission(Permission_ID),
     FOREIGN KEY (Role_ID) REFERENCES Role(Role_ID)
@@ -131,10 +136,10 @@ CREATE TABLE Branch
     Branch_ID INT PRIMARY KEY,
     Name VARCHAR(100),
     Address VARCHAR(200),
-    Country_ID INT,
-    Province_ID INT,
-    City_ID INT,
-    Suburb_ID INT,
+    Country_ID INT NULL,
+    Province_ID INT NULL,
+    City_ID INT NULL,
+    Suburb_ID INT NULL,
     FOREIGN KEY (Country_ID) REFERENCES Country(Country_ID),
     FOREIGN KEY (Province_ID) REFERENCES Province(Province_ID),
     FOREIGN KEY (City_ID) REFERENCES City(City_ID),
@@ -155,9 +160,9 @@ CREATE TABLE Job
 CREATE TABLE Employee
 (
     Employee_ID INT PRIMARY KEY,
-    User_ID INT,
-    Branch_ID INT,
-    Job_ID INT,
+    User_ID INT NULL,
+    Branch_ID INT NULL,
+    Job_ID INT NULL,
     CurrentSalary DECIMAL(10,2),
     HireDate DATE,
     FOREIGN KEY (User_ID) REFERENCES [User](User_ID),
@@ -171,7 +176,7 @@ CREATE TABLE Employee
 CREATE TABLE Application
 (
     Application_ID INT PRIMARY KEY,
-    User_ID INT,
+    User_ID INT NULL,
     DateApplied DATE,
     SalaryExpectation DECIMAL(10,2),
     ApplicantNote TEXT,
@@ -181,9 +186,9 @@ CREATE TABLE Application
 CREATE TABLE Vacancy
 (
     Vacancy_ID INT PRIMARY KEY,
-    Application_ID INT,
-    Job_ID INT,
-    Branch_ID INT,
+    Application_ID INT NULL,
+    Job_ID INT NULL,
+    Branch_ID INT NULL,
     PostingDate DATE,
     UpdatedAt DATE,
     ApplicationDeadline DATE,
@@ -195,7 +200,7 @@ CREATE TABLE Vacancy
 CREATE TABLE Shortlist
 (
     Shortlist_ID INT PRIMARY KEY,
-    Vacancy_ID INT,
+    Vacancy_ID INT NULL,
     CreatedAt DATETIME,
     Stage VARCHAR(100),
     FOREIGN KEY (Vacancy_ID) REFERENCES Vacancy(Vacancy_ID)
@@ -203,8 +208,8 @@ CREATE TABLE Shortlist
 
 CREATE TABLE ShortlistedCandidate
 (
-    User_ID INT,
-    Shortlist_ID INT,
+    User_ID INT NOT NULL,
+    Shortlist_ID INT NOT NULL,
     PRIMARY KEY (User_ID, Shortlist_ID),
     FOREIGN KEY (User_ID) REFERENCES [User](User_ID),
     FOREIGN KEY (Shortlist_ID) REFERENCES Shortlist(Shortlist_ID)
@@ -216,9 +221,9 @@ CREATE TABLE ShortlistedCandidate
 CREATE TABLE Interview
 (
     Interview_ID INT PRIMARY KEY,
-    User_ID INT,
-    Employee_ID INT,
-    Vacancy_ID INT,
+    User_ID INT NULL,
+    Employee_ID INT NULL,
+    Vacancy_ID INT NULL,
     Location VARCHAR(100),
     Date DATE,
     Time TIME,
@@ -236,7 +241,7 @@ CREATE TABLE Interview
 CREATE TABLE InterviewNote
 (
     InterviewNote_ID INT PRIMARY KEY,
-    Interview_ID INT,
+    Interview_ID INT NULL,
     Note TEXT,
     CreatedAt DATETIME,
     LastUpdatedAt DATETIME,
@@ -246,8 +251,8 @@ CREATE TABLE InterviewNote
 CREATE TABLE ApplicationFeedback
 (
     Feedback_ID INT PRIMARY KEY,
-    Application_ID INT,
-    Employee_ID INT,
+    Application_ID INT NULL,
+    Employee_ID INT NULL,
     Comment TEXT,
     Date DATE,
     Time TIME,
@@ -258,8 +263,8 @@ CREATE TABLE ApplicationFeedback
 CREATE TABLE InterviewFeedback
 (
     Feedback_ID INT PRIMARY KEY,
-    Interview_ID INT,
-    Comment TEXT,
+    Interview_ID INT NULL,
+    Comment TEXT NULL,
     Date DATE,
     Time TIME,
     FOREIGN KEY (Interview_ID) REFERENCES Interview(Interview_ID)
@@ -271,8 +276,8 @@ CREATE TABLE InterviewFeedback
 CREATE TABLE Conversation
 (
     Conversation_ID INT PRIMARY KEY,
-    User_ID INT,
-    Employee_ID INT,
+    User_ID INT NULL,
+    Employee_ID INT NULL,
     Subject VARCHAR(255),
     CreatedAt DATETIME,
     FOREIGN KEY (User_ID) REFERENCES [User](User_ID),
@@ -282,8 +287,8 @@ CREATE TABLE Conversation
 CREATE TABLE Message
 (
     Message_ID INT PRIMARY KEY,
-    User_ID INT,
-    Conversation_ID INT,
+    User_ID INT NULL,
+    Conversation_ID INT NULL,
     MessageText TEXT,
     SentAt DATETIME,
     FOREIGN KEY (User_ID) REFERENCES [User](User_ID),
@@ -292,8 +297,8 @@ CREATE TABLE Message
 
 CREATE TABLE ConverationParticipant
 (
-    Conversation_ID INT,
-    User_ID INT,
+    Conversation_ID INT NOT NULL,
+    User_ID INT NOT NULL,
     JoinedAt DATETIME,
     PRIMARY KEY (Conversation_ID, User_ID),
     FOREIGN KEY (Conversation_ID) REFERENCES Conversation(Conversation_ID),
