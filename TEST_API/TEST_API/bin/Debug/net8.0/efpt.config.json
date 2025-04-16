@@ -1,0 +1,153 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "TEST_MAINDbContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "TEST_API",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Application]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ApplicationFeedback]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Branch]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[City]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ConverationParticipant]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Conversation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Country]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Gender]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Interview]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InterviewFeedback]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InterviewNote]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Job]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Message]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Permission]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PermissionCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Province]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Race]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RolePermission]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Shortlist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShortlistedCandidate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Suburb]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Title]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserSession]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vacancy]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": true,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": true,
+   "UseT4Split": false
+}

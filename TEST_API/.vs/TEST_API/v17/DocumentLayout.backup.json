@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api\\test_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|solutionrelative:test_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api\\test_api\\models\\test_maindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|solutionrelative:test_api\\models\\test_maindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api\\test_api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|solutionrelative:test_api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api\\test_api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|solutionrelative:test_api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api\\test_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752E05C0-5DD5-4A13-B981-E25EA4680FD8}|TEST_API\\TEST_API.csproj|solutionrelative:test_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\appsettings.json",
+              "RelativeDocumentMoniker": "TEST_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\appsettings.json",
+              "RelativeToolTip": "TEST_API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-16T13:53:33.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TEST_API\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Models\\User.cs",
+              "RelativeToolTip": "TEST_API\\Models\\User.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAqwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:38:08.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "TEST_API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "TEST_API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wCQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:37:01.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Program.cs",
+              "RelativeDocumentMoniker": "TEST_API\\Program.cs",
+              "ToolTip": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Program.cs",
+              "RelativeToolTip": "TEST_API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:36:27.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TEST_MAINDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Models\\TEST_MAINDbContext.cs",
+              "RelativeDocumentMoniker": "TEST_API\\Models\\TEST_MAINDbContext.cs",
+              "ToolTip": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API\\TEST_API\\Models\\TEST_MAINDbContext.cs",
+              "RelativeToolTip": "TEST_API\\Models\\TEST_MAINDbContext.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAuwFUBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T13:33:47.283Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
