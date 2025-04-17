@@ -1,0 +1,40 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# EF Core Power Tools
+efpt.config.json.user
+
+# ASP.NET Core settings (keep base, ignore env-specific)
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+secrets.json
+
+# Optional: database and secrets
+*.db
+*.mdf
+*.ldf
+*.sqlite
+.env
+.env.*
+*.bak
+
+# Coverage / test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Rider / VS Code settings
+.idea/
+.vscode/
