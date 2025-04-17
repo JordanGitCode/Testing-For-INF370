@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 
 namespace TEST_API.Models;
@@ -96,37 +97,19 @@ public partial class User
     public virtual ICollection<UserSession> UserSessions { get; set; } = new List<UserSession>();
 }
 
-public class UserInputDto
+public partial class UserDTO
 {
+    public int UserId { get; set; }
     public int? TitleId { get; set; }
     public int? RaceId { get; set; }
     public int? GenderId { get; set; }
     public int? RoleId { get; set; }
-
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public string Idnumber { get; set; }
-    public string PhoneNumber { get; set; }
-    public string EmailAddress { get; set; }
+    public string Name { get; set; } = null!;
+    public string Surname { get; set; } = null!;
+    public string Idnumber { get; set; } = null!;
+    public string PhoneNumber { get; set; } = null!;
+    public string EmailAddress { get; set; } = null!;
     public DateOnly? DateOfBirth { get; set; }
-
-    public string PasswordHash { get; set; }
-
-    public string CurrentPosition { get; set; }
-}
-
-public class UserDto
-{
-    public int UserId { get; set; }
-
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public string EmailAddress { get; set; }
-
-    public string CurrentPosition { get; set; }
-
-    public string PasswordHash { get; set; }
-
-    // Add only what’s needed—no sensitive info like PasswordHash
-
+    public string PasswordHash { get; set; } = null!;
+    public string CurrentPosition { get; set; } = null!;
 }

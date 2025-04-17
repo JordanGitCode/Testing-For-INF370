@@ -8,11 +8,9 @@ namespace TEST_API.Mappings
         public MappingProfile()
         {
             // CreateMap<Source, Destination>();
-            CreateMap<User, UserDto>();
+            CreateMap<User, UserDTO>();
 
-            CreateMap<UserInputDto, User>();
-
-            CreateMap<User, UserInputDto>();
+            CreateMap<UserDTO, User>();
         }
     }
 }

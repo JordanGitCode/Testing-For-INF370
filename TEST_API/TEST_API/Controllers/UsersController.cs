@@ -25,55 +25,54 @@ namespace TEST_API.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserDto>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
+            // Use AutoMapper to map User to UserDTO
             var users = await _context.Users.ToListAsync();
-            return _mapper.Map<List<UserDto>>(users);
+
+            return users.Select(user => _mapper.Map<UserDTO>(user)).ToList();
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDto>> GetUser(int id)
+        public async Task<ActionResult<UserDTO>> GetUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
+            var userDTO = _mapper.Map<UserDTO>(user);
 
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return _mapper.Map<UserDto>(user);
+            return userDTO;
         }
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, UserInputDto dto)
+        public async Task<IActionResult> PutUser(int id, UserDTO userDTO)
         {
 
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
+            var user = _mapper.Map<User>(userDTO);
 
-            _mapper.Map(dto, user);
-            await _context.SaveChangesAsync();
+            if (id != user.UserId)
+            {
+                return BadRequest();
+            }
 
-            //_context.Entry(user).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
-            //try
-            //{
-            //    await _context.SaveChangesAsync();
-            //}
-            //catch (DbUpdateConcurrencyException)
-            //{
-            //    if (!UserExists(id))
-            //    {
-            //        return NotFound();
-            //    }
-            //    else
-            //    {
-            //        throw;
-            //    }
-            //}
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UserExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return NoContent();
         }
@@ -81,15 +80,28 @@ namespace TEST_API.Controllers
         // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<UserInputDto>> PostUser(UserInputDto userInputDto)
+        public async Task<ActionResult<User>> PostUser(UserDTO userDTO)
         {
-
-            var user = _mapper.Map<User>(userInputDto);
+            var user = _mapper.Map<User>(userDTO);
 
             _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (UserExists(user.UserId))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-            return CreatedAtAction(nameof(GetUser), new { id = user.UserId }, user);
+            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
         // DELETE: api/Users/5
