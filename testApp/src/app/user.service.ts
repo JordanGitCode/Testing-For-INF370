@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   users: User[] = [];
-  getUrl: string = 'https://localhost:44334/api/User';
+  getUrl: string = 'https://localhost:44397/api/Users';
 
   constructor(private http: HttpClient) { }
 

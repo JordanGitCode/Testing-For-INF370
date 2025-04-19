@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using TEST_API_CodeFirst.Models;
-using AutoMapper; // Ensure this namespace is included if not already
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +29,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());   
 
 app.MapControllers();
 
