@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api_codefirst\\test_api_codefirst\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|solutionrelative:test_api_codefirst\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api_codefirst\\test_api_codefirst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|solutionrelative:test_api_codefirst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|solutionrelative:test_api_codefirst\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api_codefirst\\test_api_codefirst\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|solutionrelative:test_api_codefirst\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|c:\\users\\duder\\documents\\github\\testing-for-inf370\\test_api_codefirst\\test_api_codefirst\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91C2B8CD-AF30-46BD-A238-D05C18DF77BA}|TEST_API_CodeFirst\\TEST_API_CodeFirst.csproj|solutionrelative:test_api_codefirst\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AppDbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Models\\AppDbContextFactory.cs",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\Models\\AppDbContextFactory.cs",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Program.cs",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\Program.cs",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Models\\UserDTO.cs",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\Models\\UserDTO.cs",
@@ -96,19 +96,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Controllers\\UsersController.cs",
               "RelativeToolTip": "TEST_API_CodeFirst\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAuwFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T10:04:13.361Z"
+              "WhenOpened": "2025-04-17T10:04:13.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\appsettings.Development.json",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\appsettings.Development.json",
@@ -121,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\Models\\AppDbContext.cs",
@@ -133,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\duder\\Documents\\GitHub\\Testing-For-INF370\\TEST_API_CodeFirst\\TEST_API_CodeFirst\\Models\\User.cs",
               "RelativeDocumentMoniker": "TEST_API_CodeFirst\\Models\\User.cs",
